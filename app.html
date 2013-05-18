@@ -3,7 +3,7 @@
     <script type="text/javascript">
       var init = function() {
         var content = document.getElementById("md-content");
-        var url = 'ws://i:9091';
+        var url = 'ws://localhost:9091';
         var conn = new WebSocket(url);
 
         conn.onerror = function(err) {
