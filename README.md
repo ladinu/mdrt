@@ -1,4 +1,4 @@
 mdrt
 ====
 
-Experimental markdown preview app to be used with vim
+Experimental markdown preview app to be used with vimasd

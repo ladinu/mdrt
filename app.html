@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      var init = function() {
+        var content = document.getElementById("md-content");
+        var url = 'ws://i:9091';
+        var conn = new WebSocket(url);
+
+        conn.onerror = function(err) {
+          alert(err);
+        }
+
+        conn.onopen = function() {
+          console.log("> Connected");
+        }
+
+        conn.onmessage = function(msg) {
+          content.innerHTML = msg.data;
+        }
+      }
+    </script>
+    <link href="https://gist.github.com/ladinu/5268842/raw/f3720e18d6baf974084b92afd90cf5f7f1d16291/github.css" media="all" rel="stylesheet" type="text/css">
+  </head>
+  <body onload="init();">
+    <div id="md-content">
+    </div>
+  </body>
+</html>

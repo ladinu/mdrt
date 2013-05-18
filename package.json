@@ -1,0 +1,25 @@
+{
+  "name": "mdrt",
+  "version": "0.0.0",
+  "description": "Experimental markdown live preview app",
+  "main": "index.js",
+  "dependencies": {
+    "marked": "*",
+    "ws": "*",
+    "vim-netbeans": "*"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ladinu/mdrt.git"
+  },
+  "author": "Ladinu Chandrasinghe",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "d543eb10d03d19835b7a1eea712048741f03a44f"
+}
