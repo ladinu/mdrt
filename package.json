@@ -2,17 +2,11 @@
   "name": "mdrt",
   "version": "0.0.0",
   "description": "Experimental markdown live preview app",
-  "main": "index.js",
+  "main": "mdrt.js",
   "dependencies": {
     "marked": "*",
     "ws": "*",
     "vim-netbeans": "*"
-  },
-  "devDependencies": {
-    "mocha": "*"
-  },
-  "scripts": {
-    "test": "make test"
   },
   "repository": {
     "type": "git",
