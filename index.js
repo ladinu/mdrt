@@ -5,7 +5,7 @@ var nb     = require('vim-netbeans');
 var marked = require('marked');
 var fs     = require('fs');
 
-var fname = process.argv[1];
+var fname = process.argv[2];
 var server = new nb.VimServer({'port': 8080, 'debug': false});
 
 var handleClient = function(client) {
