@@ -1,7 +1,7 @@
 mdrt
 ====
 
-Experimental markdown preview app to be used with vim
+Experimental markdown preview app written in node and netbeans protocol for vim.
 
 ## Basic Usage
 
