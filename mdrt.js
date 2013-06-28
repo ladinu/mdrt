@@ -28,17 +28,29 @@ server.listen();
 
 
 var wss = new WebSS( {'port': 9091} );
-var socket;
+var sockets = [];
+var md = '';
 
 wss.on('connection', function(ws) {
   log("> CONNECTION");
-  socket = ws;
+  ws.send(md);
+  sockets.push(ws);
+  ws.addEventListener('close', function() {
+    log("> CLIENT DISCONNECT");
+    sockets.splice(sockets.indexOf(ws), 1);
+  });
 });
 
 var handleChanges = function(text) {
-  var md = marked.parse(text);
-  socket.send(md, function(err) {
+  md = marked.parse(text);
+  broadcast(md, function(err) {
     if (err) log("> ERR: ", err);
+  });
+}
+
+var broadcast = function(text, cb) {
+  sockets.forEach(function(socket) {
+    socket.send(text, cb);
   });
 }
 
