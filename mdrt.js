@@ -57,7 +57,7 @@ var broadcast = function(text, cb) {
 var httpServer = http.createServer(function(req, res) {
   var url = req.url;
   if (url !== '/')
-    res.end()
+    res.end();
   else
     fs.createReadStream('./app.html').pipe(res);
 });
