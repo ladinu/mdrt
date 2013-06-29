@@ -6,7 +6,7 @@ var marked = require('marked');
 var fs     = require('fs');
 
 var fname = process.argv[2];
-var server = new nb.VimServer({'port': 8080, 'debug': false});
+var server = new nb.VimServer();
 
 var handleClient = function(client) {
 
