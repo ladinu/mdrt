@@ -62,4 +62,6 @@ var httpServer = http.createServer(function(req, res) {
     fs.createReadStream('./app.html').pipe(res);
 });
 
-httpServer.listen(9090);
+httpServer.listen(9090, function() {
+   console.log("> Listening on port 9090...")
+});
